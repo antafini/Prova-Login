@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Registrazione Utente</h1>
         <form id="registrationForm" action="mailto:alfredo.macchiaverna@live.it" method="post" enctype="text/plain">
-            <img src="logo.png" alt="Logo" class="logo">
+
             <label for="name">Nome:</label>
             <input type="text" id="name" name="name" required><br>
 
@@ -29,13 +29,13 @@
     </div>
 
     <script>
-        // Aggiungi un gestore per l'invio del form
         document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            // Reindirizza alla home page
-            window.location.href = "index.html";
-            
-            // Puoi anche rimuovere il commento seguente per evitare che il form venga effettivamente inviato
-            // event.preventDefault();
+            // Reimposta i campi su una stringa vuota dopo l'invio
+            document.getElementById("name").value = "";
+            document.getElementById("cognome").value = "";
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+
         });
     </script>
 </body>
