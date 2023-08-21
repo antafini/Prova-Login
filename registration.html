@@ -9,23 +9,34 @@
 <body>
     <div class="container">
         <h1>Registrazione Utente</h1>
-        <form action="mailto:alfredo.macchiaverna@live.it" method="post" enctype="text/plain">
+        <form id="registrationForm" action="mailto:alfredo.macchiaverna@live.it" method="post" enctype="text/plain">
+            <img src="logo.png" alt="Logo" class="logo">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required><br>
 
             <label for="name">Cognome:</label>
-            <input type="text" id="cognome" name="cognome" required>
+            <input type="text" id="cognome" name="cognome" required><br>
             
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" required><br>
             
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required><br>
             
             <input type="submit" value="Registrati">
             <a href="index.html">Torna alla Pagina di Login</a>
         </form>
     </div>
+
+    <script>
+        // Aggiungi un gestore per l'invio del form
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            // Reindirizza alla home page
+            window.location.href = "index.html";
+            
+            // Puoi anche rimuovere il commento seguente per evitare che il form venga effettivamente inviato
+            // event.preventDefault();
+        });
+    </script>
 </body>
 </html>
-
