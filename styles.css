@@ -104,9 +104,3 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-.logo {
-    width: 380px; /* Imposta la larghezza desiderata */
-    height: auto;
-    
-}
