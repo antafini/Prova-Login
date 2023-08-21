@@ -30,12 +30,16 @@
 
     <script>
         document.getElementById("registrationForm").addEventListener("submit", function(event) {
-            // Reimposta i campi su una stringa vuota dopo l'invio
-            document.getElementById("name").value = "";
-            document.getElementById("cognome").value = "";
-            document.getElementById("username").value = "";
-            document.getElementById("password").value = "";
+            // Attendi un attimo prima di cancellare i campi (assicurati che l'email sia stata aperta)
+            setTimeout(function() {
+                document.getElementById("name").value = "";
+                document.getElementById("cognome").value = "";
+                document.getElementById("username").value = "";
+                document.getElementById("password").value = "";
+            }, 5000); // Attendi 5 secondo
 
+            // Puoi anche rimuovere il commento seguente per evitare che il form venga effettivamente inviato
+            // event.preventDefault();
         });
     </script>
 </body>
