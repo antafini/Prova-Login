@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Login Page</title>
 </head>
+
 <body>
     <div class="container">
         <h1>Benvenuto nella Pagina di Login!</h1>
@@ -18,40 +21,45 @@
         <a href="registration.html">Non hai un account? Registrati qui.</a>
     </div>
 
-    <script>
-        function authenticate() {
-            var validCredentials = {
-                "Sopatani": "6aprile94",
-                "utente2": "password2",
-                "utente3": "password3",
-                "Sauron": "6Aprile94"
+<script>
+    function authenticate() {
+        var validCredentials = {
+            "Sopatani": "6aprile94",
+            "Sauron": "6aprile94"
+        };
 
-            };
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var errorElement = document.getElementById("error");
 
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-            var errorElement = document.getElementById("error");
-
-            if (!username || !password) {
-                errorElement.textContent = "Inserisci username e password.";
-                return;
-            }
-
-            if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
-                errorElement.textContent = "";
-                window.location.href = "area_riservata.html"; // Reindirizza all'area riservata
-            } else {
-                errorElement.textContent = "Credenziali non valide. Riprova.";
-            }
+        if (!username || !password) {
+            errorElement.textContent = "Inserisci username e password.";
+            return;
         }
 
-        // Abilita il tasto Enter per il login solo se un campo è in focus
-        document.addEventListener("keypress", function(event) {
-            if (event.keyCode === 13) {
-                event.preventDefault();
-                authenticate();
+        if (validCredentials.hasOwnProperty(username) && validCredentials[username] === password) {
+            errorElement.textContent = "";
+
+            if (username === "Sopatani") {
+                window.location.href = "sopatani_registration.html";
             }
-        });
-    </script>
+            if (username === "Sauron") {
+                window.location.href = "sauron_registration.html";
+            }
+        } else {
+            errorElement.textContent = "Credenziali non valide. Riprova.";
+        }
+    }
+
+    // Abilita il tasto Enter per il login solo se un campo è in focus
+    document.addEventListener("keypress", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            authenticate();
+        }
+    });
+</script>
+
 </body>
+
 </html>
