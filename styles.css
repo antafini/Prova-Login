@@ -167,3 +167,101 @@ button:disabled {
     padding: 5px;
 }
 
+@media (max-width: 600px) {
+    /* Stili di base */
+    body {
+        background-color: #5e5353;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    /* Contenitore principale */
+    .container {
+        max-width: 100%;
+        margin: 10px;
+        padding: 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Input e pulsanti */
+    input[type="button"], input[type="submit"], button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        width: 100%;
+    }
+    
+    input[type="button"]:hover, input[type="submit"]:hover, button:hover {
+        background-color: #0056b3;
+    }
+    
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+    
+    /* Link e testi */
+    .register-link, a {
+        display: block;
+        margin-top: 10px;
+        color: #007bff;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Intestazione e contenuti principali */
+    header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+    
+    main {
+        max-width: 100%;
+        margin: 10px;
+        padding: 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    
+    section {
+        margin-bottom: 20px;
+    }
+    
+    h1, h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    p {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+    
+    /* Piede di pagina */
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    }
